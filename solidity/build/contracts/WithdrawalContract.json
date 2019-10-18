@@ -1,0 +1,2914 @@
+{
+  "contractName": "WithdrawalContract",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "pay",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"pay\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"pay()\":{\"notice\":\"Pay to this function To make things easier - payer can pay only once, if tries more than once throw*\"},\"withdraw()\":{\"notice\":\"Withdraw using this function*\"}}}},\"settings\":{\"compilationTarget\":{\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/WithdrawalContract.sol\":\"WithdrawalContract\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/WithdrawalContract.sol\":{\"keccak256\":\"0x334dcfe8e3b0d8ab311d6732fc00bff9d1bce6e6698b23a6da1a11da8cc93254\",\"urls\":[\"bzzr://f15d482c22474730c174cbc001457e840dbadcc4346bd1409bd0684bfa7266cd\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102dc806100206000396000f3fe6080604052600436106100345760003560e01c806312065fe0146100395780631b9265b8146100645780633ccfd60b1461006e575b600080fd5b34801561004557600080fd5b5061004e610085565b6040518082815260200191505060405180910390f35b61006c6100a9565b005b34801561007a57600080fd5b50610083610165565b005b6000803090508073ffffffffffffffffffffffffffffffffffffffff163191505090565b60003414156100b757600080fd5b600060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff168152602001348152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010155505050565b60008090505b6000805490508110156102a8576000818154811061018557fe5b906000526020600020906002020160000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561029b5760008082815481106101f857fe5b9060005260206000209060020201600101541161021457600080fd5b600080828154811061022257fe5b9060005260206000209060020201600101549050600080838154811061024457fe5b9060005260206000209060020201600101819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505061029457fe5b50506102ae565b808060010191505061016b565b50600080fd5b56fea165627a7a72305820afc5696386306dd053ba7ac703435394d2d6076ad02a3dcb768ac563347ff74a0029",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c806312065fe0146100395780631b9265b8146100645780633ccfd60b1461006e575b600080fd5b34801561004557600080fd5b5061004e610085565b6040518082815260200191505060405180910390f35b61006c6100a9565b005b34801561007a57600080fd5b50610083610165565b005b6000803090508073ffffffffffffffffffffffffffffffffffffffff163191505090565b60003414156100b757600080fd5b600060405180604001604052803373ffffffffffffffffffffffffffffffffffffffff168152602001348152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060208201518160010155505050565b60008090505b6000805490508110156102a8576000818154811061018557fe5b906000526020600020906002020160000160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561029b5760008082815481106101f857fe5b9060005260206000209060020201600101541161021457600080fd5b600080828154811061022257fe5b9060005260206000209060020201600101549050600080838154811061024457fe5b9060005260206000209060020201600101819055503373ffffffffffffffffffffffffffffffffffffffff166108fc829081150290604051600060405180830381858888f1935050505061029457fe5b50506102ae565b808060010191505061016b565b50600080fd5b56fea165627a7a72305820afc5696386306dd053ba7ac703435394d2d6076ad02a3dcb768ac563347ff74a0029",
+  "sourceMap": "25:1229:22:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:1229:22;;;;;;;",
+  "deployedSourceMap": "25:1229:22:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1096:155;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1096:155:22;;;:::i;:::-;;;;;;;;;;;;;;;;;;;310:134;;;:::i;:::-;;501:589;;8:9:-1;5:2;;;30:1;27;20:12;5:2;501:589:22;;;:::i;:::-;;1096:155;1140:4;1155:28;1194:4;1155:44;;1216:20;:28;;;1209:35;;;1096:155;:::o;310:134::-;374:1;361:9;:14;358:27;;;377:8;;;358:27;396:6;408:28;;;;;;;;414:10;408:28;;;;;;426:9;408:28;;;396:41;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;396:41:22;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;310:134::o;501:589::-;597:6;606:1;597:10;;593:403;613:6;:13;;;;609:1;:17;593:403;;;663:6;670:1;663:9;;;;;;;;;;;;;;;;;;:15;;;;;;;;;;;;649:29;;:10;:29;;;646:340;;;725:1;706:6;713:1;706:9;;;;;;;;;;;;;;;;;;:16;;;:20;698:29;;;;;;746:8;757:6;764:1;757:9;;;;;;;;;;;;;;;;;;:16;;;746:27;;811:1;792:6;799:1;792:9;;;;;;;;;;;;;;;;;;:16;;:20;;;;925:10;:15;;:20;941:3;925:20;;;;;;;;;;;;;;;;;;;;;;;918:28;;;;965:7;;;;646:340;628:3;;;;;;;593:403;;;;1075:8;;;501:589;:::o",
+  "source": "pragma solidity ^0.5.0;\n\ncontract WithdrawalContract {\n\n    struct Payer {\n        address payer;\n        uint    amount;\n    }\n\n    // Array of all payers\n    Payer[]  payers;\n\n    /**\n    * Pay to this function\n    * To make things easier - payer can pay only once, if tries more than once throw\n    **/\n    function  pay() public payable {\n      \n        if(msg.value == 0) revert();\n\n        payers.push(Payer(msg.sender, msg.value));\n    }\n\n    /**\n    * Withdraw using this function\n    **/\n    function  withdraw() public {\n        // Check if there is a balance for the caller\n        for(uint i = 0; i < payers.length; i++){\n            if(msg.sender == payers[i].payer){\n\n                require(payers[i].amount > 0);\n\n                uint amt = payers[i].amount;\n\n                payers[i].amount = 0;\n\n                // revert() if sender returns a false\n                // otherwise the\n                assert(msg.sender.send(amt));\n\n                return;\n            }\n        }\n        // That means the address was not found in the list of payers\n        revert();\n    }\n\n    function  getBalance() public view returns (uint){\n        address thisContractsAddress = address(this);\n        return thisContractsAddress.balance;\n    }\n\n}",
+  "sourcePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/WithdrawalContract.sol",
+  "ast": {
+    "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/WithdrawalContract.sol",
+    "exportedSymbols": {
+      "WithdrawalContract": [
+        2703
+      ]
+    },
+    "id": 2704,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2595,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2703,
+        "linearizedBaseContracts": [
+          2703
+        ],
+        "name": "WithdrawalContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "WithdrawalContract.Payer",
+            "id": 2600,
+            "members": [
+              {
+                "constant": false,
+                "id": 2597,
+                "name": "payer",
+                "nodeType": "VariableDeclaration",
+                "scope": 2600,
+                "src": "83:13:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2596,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "83:7:22",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2599,
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "scope": 2600,
+                "src": "106:14:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2598,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "106:4:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Payer",
+            "nodeType": "StructDefinition",
+            "scope": 2703,
+            "src": "60:67:22",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 2603,
+            "name": "payers",
+            "nodeType": "VariableDeclaration",
+            "scope": 2703,
+            "src": "160:15:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+              "typeString": "struct WithdrawalContract.Payer[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 2601,
+                "name": "Payer",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2600,
+                "src": "160:5:22",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Payer_$2600_storage_ptr",
+                  "typeString": "struct WithdrawalContract.Payer"
+                }
+              },
+              "id": 2602,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "160:7:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage_ptr",
+                "typeString": "struct WithdrawalContract.Payer[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2625,
+              "nodeType": "Block",
+              "src": "341:103:22",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2609,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2606,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2718,
+                        "src": "361:3:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 2607,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "361:9:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2608,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "374:1:22",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "361:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2613,
+                  "nodeType": "IfStatement",
+                  "src": "358:27:22",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2610,
+                        "name": "revert",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [
+                          2723,
+                          2724
+                        ],
+                        "referencedDeclaration": 2723,
+                        "src": "377:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2611,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "377:8:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2612,
+                    "nodeType": "ExpressionStatement",
+                    "src": "377:8:22"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2618,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "414:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2619,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "414:10:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2620,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "426:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2621,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "value",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "426:9:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 2617,
+                          "name": "Payer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2600,
+                          "src": "408:5:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Payer_$2600_storage_ptr_$",
+                            "typeString": "type(struct WithdrawalContract.Payer storage pointer)"
+                          }
+                        },
+                        "id": 2622,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "408:28:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Payer_$2600_memory",
+                          "typeString": "struct WithdrawalContract.Payer memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Payer_$2600_memory",
+                          "typeString": "struct WithdrawalContract.Payer memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2614,
+                        "name": "payers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2603,
+                        "src": "396:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                          "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                        }
+                      },
+                      "id": 2616,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "396:11:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Payer_$2600_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct WithdrawalContract.Payer storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 2623,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "396:41:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2624,
+                  "nodeType": "ExpressionStatement",
+                  "src": "396:41:22"
+                }
+              ]
+            },
+            "documentation": "Pay to this function\nTo make things easier - payer can pay only once, if tries more than once throw*",
+            "id": 2626,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2604,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:2:22"
+            },
+            "returnParameters": {
+              "id": 2605,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:0:22"
+            },
+            "scope": 2703,
+            "src": "310:134:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2686,
+              "nodeType": "Block",
+              "src": "529:561:22",
+              "statements": [
+                {
+                  "body": {
+                    "id": 2681,
+                    "nodeType": "Block",
+                    "src": "632:364:22",
+                    "statements": [
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "id": 2646,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2640,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "649:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2641,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "649:10:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 2642,
+                                "name": "payers",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2603,
+                                "src": "663:6:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                  "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                }
+                              },
+                              "id": 2644,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 2643,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2630,
+                                "src": "670:1:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "663:9:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                "typeString": "struct WithdrawalContract.Payer storage ref"
+                              }
+                            },
+                            "id": 2645,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "payer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 2597,
+                            "src": "663:15:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "649:29:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 2680,
+                        "nodeType": "IfStatement",
+                        "src": "646:340:22",
+                        "trueBody": {
+                          "id": 2679,
+                          "nodeType": "Block",
+                          "src": "679:307:22",
+                          "statements": [
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "arguments": [
+                                  {
+                                    "argumentTypes": null,
+                                    "commonType": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    "id": 2653,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "leftExpression": {
+                                      "argumentTypes": null,
+                                      "expression": {
+                                        "argumentTypes": null,
+                                        "baseExpression": {
+                                          "argumentTypes": null,
+                                          "id": 2648,
+                                          "name": "payers",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2603,
+                                          "src": "706:6:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                            "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                          }
+                                        },
+                                        "id": 2650,
+                                        "indexExpression": {
+                                          "argumentTypes": null,
+                                          "id": 2649,
+                                          "name": "i",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2630,
+                                          "src": "713:1:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                          }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "706:9:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                          "typeString": "struct WithdrawalContract.Payer storage ref"
+                                        }
+                                      },
+                                      "id": 2651,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "memberName": "amount",
+                                      "nodeType": "MemberAccess",
+                                      "referencedDeclaration": 2599,
+                                      "src": "706:16:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "nodeType": "BinaryOperation",
+                                    "operator": ">",
+                                    "rightExpression": {
+                                      "argumentTypes": null,
+                                      "hexValue": "30",
+                                      "id": 2652,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "number",
+                                      "lValueRequested": false,
+                                      "nodeType": "Literal",
+                                      "src": "725:1:22",
+                                      "subdenomination": null,
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_0_by_1",
+                                        "typeString": "int_const 0"
+                                      },
+                                      "value": "0"
+                                    },
+                                    "src": "706:20:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  ],
+                                  "id": 2647,
+                                  "name": "require",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [
+                                    2721,
+                                    2722
+                                  ],
+                                  "referencedDeclaration": 2721,
+                                  "src": "698:7:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                                    "typeString": "function (bool) pure"
+                                  }
+                                },
+                                "id": 2654,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "functionCall",
+                                "lValueRequested": false,
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "698:29:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_tuple$__$",
+                                  "typeString": "tuple()"
+                                }
+                              },
+                              "id": 2655,
+                              "nodeType": "ExpressionStatement",
+                              "src": "698:29:22"
+                            },
+                            {
+                              "assignments": [
+                                2657
+                              ],
+                              "declarations": [
+                                {
+                                  "constant": false,
+                                  "id": 2657,
+                                  "name": "amt",
+                                  "nodeType": "VariableDeclaration",
+                                  "scope": 2679,
+                                  "src": "746:8:22",
+                                  "stateVariable": false,
+                                  "storageLocation": "default",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "typeName": {
+                                    "id": 2656,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "746:4:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "value": null,
+                                  "visibility": "internal"
+                                }
+                              ],
+                              "id": 2662,
+                              "initialValue": {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "baseExpression": {
+                                    "argumentTypes": null,
+                                    "id": 2658,
+                                    "name": "payers",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 2603,
+                                    "src": "757:6:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                      "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                    }
+                                  },
+                                  "id": 2660,
+                                  "indexExpression": {
+                                    "argumentTypes": null,
+                                    "id": 2659,
+                                    "name": "i",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 2630,
+                                    "src": "764:1:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "nodeType": "IndexAccess",
+                                  "src": "757:9:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                    "typeString": "struct WithdrawalContract.Payer storage ref"
+                                  }
+                                },
+                                "id": 2661,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "amount",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2599,
+                                "src": "757:16:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "VariableDeclarationStatement",
+                              "src": "746:27:22"
+                            },
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 2668,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftHandSide": {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "baseExpression": {
+                                      "argumentTypes": null,
+                                      "id": 2663,
+                                      "name": "payers",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2603,
+                                      "src": "792:6:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                        "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                      }
+                                    },
+                                    "id": 2665,
+                                    "indexExpression": {
+                                      "argumentTypes": null,
+                                      "id": 2664,
+                                      "name": "i",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2630,
+                                      "src": "799:1:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "isConstant": false,
+                                    "isLValue": true,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "nodeType": "IndexAccess",
+                                    "src": "792:9:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                      "typeString": "struct WithdrawalContract.Payer storage ref"
+                                    }
+                                  },
+                                  "id": 2666,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": true,
+                                  "memberName": "amount",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": 2599,
+                                  "src": "792:16:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "rightHandSide": {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 2667,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "811:1:22",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                },
+                                "src": "792:20:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "id": 2669,
+                              "nodeType": "ExpressionStatement",
+                              "src": "792:20:22"
+                            },
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "arguments": [
+                                  {
+                                    "argumentTypes": null,
+                                    "arguments": [
+                                      {
+                                        "argumentTypes": null,
+                                        "id": 2674,
+                                        "name": "amt",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2657,
+                                        "src": "941:3:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      ],
+                                      "expression": {
+                                        "argumentTypes": null,
+                                        "expression": {
+                                          "argumentTypes": null,
+                                          "id": 2671,
+                                          "name": "msg",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2718,
+                                          "src": "925:3:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_magic_message",
+                                            "typeString": "msg"
+                                          }
+                                        },
+                                        "id": 2672,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "sender",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": null,
+                                        "src": "925:10:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_address_payable",
+                                          "typeString": "address payable"
+                                        }
+                                      },
+                                      "id": 2673,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "memberName": "send",
+                                      "nodeType": "MemberAccess",
+                                      "referencedDeclaration": null,
+                                      "src": "925:15:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_function_send_nonpayable$_t_uint256_$returns$_t_bool_$",
+                                        "typeString": "function (uint256) returns (bool)"
+                                      }
+                                    },
+                                    "id": 2675,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "925:20:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  ],
+                                  "id": 2670,
+                                  "name": "assert",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 2707,
+                                  "src": "918:6:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                    "typeString": "function (bool) pure"
+                                  }
+                                },
+                                "id": 2676,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "functionCall",
+                                "lValueRequested": false,
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "918:28:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_tuple$__$",
+                                  "typeString": "tuple()"
+                                }
+                              },
+                              "id": 2677,
+                              "nodeType": "ExpressionStatement",
+                              "src": "918:28:22"
+                            },
+                            {
+                              "expression": null,
+                              "functionReturnParameters": 2628,
+                              "id": 2678,
+                              "nodeType": "Return",
+                              "src": "965:7:22"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2636,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2633,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2630,
+                      "src": "609:1:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2634,
+                        "name": "payers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2603,
+                        "src": "613:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                          "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                        }
+                      },
+                      "id": 2635,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "613:13:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "609:17:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2682,
+                  "initializationExpression": {
+                    "assignments": [
+                      2630
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 2630,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 2682,
+                        "src": "597:6:22",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 2629,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "597:4:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 2632,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2631,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "606:1:22",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "597:10:22"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2638,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "628:3:22",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 2637,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2630,
+                        "src": "628:1:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2639,
+                    "nodeType": "ExpressionStatement",
+                    "src": "628:3:22"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "593:403:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2683,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2723,
+                        2724
+                      ],
+                      "referencedDeclaration": 2723,
+                      "src": "1075:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2684,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1075:8:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2685,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1075:8:22"
+                }
+              ]
+            },
+            "documentation": "Withdraw using this function*",
+            "id": 2687,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2627,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "519:2:22"
+            },
+            "returnParameters": {
+              "id": 2628,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "529:0:22"
+            },
+            "scope": 2703,
+            "src": "501:589:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2701,
+              "nodeType": "Block",
+              "src": "1145:106:22",
+              "statements": [
+                {
+                  "assignments": [
+                    2693
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2693,
+                      "name": "thisContractsAddress",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2701,
+                      "src": "1155:28:22",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 2692,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1155:7:22",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2697,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2695,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2776,
+                        "src": "1194:4:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_WithdrawalContract_$2703",
+                          "typeString": "contract WithdrawalContract"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_WithdrawalContract_$2703",
+                          "typeString": "contract WithdrawalContract"
+                        }
+                      ],
+                      "id": 2694,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1186:7:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 2696,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1186:13:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1155:44:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2698,
+                      "name": "thisContractsAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2693,
+                      "src": "1216:20:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2699,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1216:28:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2691,
+                  "id": 2700,
+                  "nodeType": "Return",
+                  "src": "1209:35:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2702,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2688,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1116:2:22"
+            },
+            "returnParameters": {
+              "id": 2691,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2690,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2702,
+                  "src": "1140:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2689,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:6:22"
+            },
+            "scope": 2703,
+            "src": "1096:155:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2704,
+        "src": "25:1229:22"
+      }
+    ],
+    "src": "0:1254:22"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/WithdrawalContract.sol",
+    "exportedSymbols": {
+      "WithdrawalContract": [
+        2703
+      ]
+    },
+    "id": 2704,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2595,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:22"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2703,
+        "linearizedBaseContracts": [
+          2703
+        ],
+        "name": "WithdrawalContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "WithdrawalContract.Payer",
+            "id": 2600,
+            "members": [
+              {
+                "constant": false,
+                "id": 2597,
+                "name": "payer",
+                "nodeType": "VariableDeclaration",
+                "scope": 2600,
+                "src": "83:13:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2596,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "83:7:22",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2599,
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "scope": 2600,
+                "src": "106:14:22",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 2598,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "106:4:22",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Payer",
+            "nodeType": "StructDefinition",
+            "scope": 2703,
+            "src": "60:67:22",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 2603,
+            "name": "payers",
+            "nodeType": "VariableDeclaration",
+            "scope": 2703,
+            "src": "160:15:22",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+              "typeString": "struct WithdrawalContract.Payer[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 2601,
+                "name": "Payer",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 2600,
+                "src": "160:5:22",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Payer_$2600_storage_ptr",
+                  "typeString": "struct WithdrawalContract.Payer"
+                }
+              },
+              "id": 2602,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "160:7:22",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage_ptr",
+                "typeString": "struct WithdrawalContract.Payer[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 2625,
+              "nodeType": "Block",
+              "src": "341:103:22",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2609,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2606,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2718,
+                        "src": "361:3:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 2607,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "value",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "361:9:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2608,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "374:1:22",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "361:14:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 2613,
+                  "nodeType": "IfStatement",
+                  "src": "358:27:22",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2610,
+                        "name": "revert",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [
+                          2723,
+                          2724
+                        ],
+                        "referencedDeclaration": 2723,
+                        "src": "377:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2611,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "377:8:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2612,
+                    "nodeType": "ExpressionStatement",
+                    "src": "377:8:22"
+                  }
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2618,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "414:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2619,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "414:10:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2620,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "426:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2621,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "value",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "426:9:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 2617,
+                          "name": "Payer",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2600,
+                          "src": "408:5:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_Payer_$2600_storage_ptr_$",
+                            "typeString": "type(struct WithdrawalContract.Payer storage pointer)"
+                          }
+                        },
+                        "id": 2622,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "408:28:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Payer_$2600_memory",
+                          "typeString": "struct WithdrawalContract.Payer memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Payer_$2600_memory",
+                          "typeString": "struct WithdrawalContract.Payer memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2614,
+                        "name": "payers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2603,
+                        "src": "396:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                          "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                        }
+                      },
+                      "id": 2616,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "396:11:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Payer_$2600_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct WithdrawalContract.Payer storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 2623,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "396:41:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 2624,
+                  "nodeType": "ExpressionStatement",
+                  "src": "396:41:22"
+                }
+              ]
+            },
+            "documentation": "Pay to this function\nTo make things easier - payer can pay only once, if tries more than once throw*",
+            "id": 2626,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2604,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "323:2:22"
+            },
+            "returnParameters": {
+              "id": 2605,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "341:0:22"
+            },
+            "scope": 2703,
+            "src": "310:134:22",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2686,
+              "nodeType": "Block",
+              "src": "529:561:22",
+              "statements": [
+                {
+                  "body": {
+                    "id": 2681,
+                    "nodeType": "Block",
+                    "src": "632:364:22",
+                    "statements": [
+                      {
+                        "condition": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "id": 2646,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 2640,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2718,
+                              "src": "649:3:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 2641,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sender",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "649:10:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address_payable",
+                              "typeString": "address payable"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "==",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 2642,
+                                "name": "payers",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2603,
+                                "src": "663:6:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                  "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                }
+                              },
+                              "id": 2644,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 2643,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 2630,
+                                "src": "670:1:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "663:9:22",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                "typeString": "struct WithdrawalContract.Payer storage ref"
+                              }
+                            },
+                            "id": 2645,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "payer",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 2597,
+                            "src": "663:15:22",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "src": "649:29:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "falseBody": null,
+                        "id": 2680,
+                        "nodeType": "IfStatement",
+                        "src": "646:340:22",
+                        "trueBody": {
+                          "id": 2679,
+                          "nodeType": "Block",
+                          "src": "679:307:22",
+                          "statements": [
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "arguments": [
+                                  {
+                                    "argumentTypes": null,
+                                    "commonType": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    "id": 2653,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "leftExpression": {
+                                      "argumentTypes": null,
+                                      "expression": {
+                                        "argumentTypes": null,
+                                        "baseExpression": {
+                                          "argumentTypes": null,
+                                          "id": 2648,
+                                          "name": "payers",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2603,
+                                          "src": "706:6:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                            "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                          }
+                                        },
+                                        "id": 2650,
+                                        "indexExpression": {
+                                          "argumentTypes": null,
+                                          "id": 2649,
+                                          "name": "i",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2630,
+                                          "src": "713:1:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                          }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "706:9:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                          "typeString": "struct WithdrawalContract.Payer storage ref"
+                                        }
+                                      },
+                                      "id": 2651,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "memberName": "amount",
+                                      "nodeType": "MemberAccess",
+                                      "referencedDeclaration": 2599,
+                                      "src": "706:16:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "nodeType": "BinaryOperation",
+                                    "operator": ">",
+                                    "rightExpression": {
+                                      "argumentTypes": null,
+                                      "hexValue": "30",
+                                      "id": 2652,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "number",
+                                      "lValueRequested": false,
+                                      "nodeType": "Literal",
+                                      "src": "725:1:22",
+                                      "subdenomination": null,
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_0_by_1",
+                                        "typeString": "int_const 0"
+                                      },
+                                      "value": "0"
+                                    },
+                                    "src": "706:20:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  ],
+                                  "id": 2647,
+                                  "name": "require",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [
+                                    2721,
+                                    2722
+                                  ],
+                                  "referencedDeclaration": 2721,
+                                  "src": "698:7:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                                    "typeString": "function (bool) pure"
+                                  }
+                                },
+                                "id": 2654,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "functionCall",
+                                "lValueRequested": false,
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "698:29:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_tuple$__$",
+                                  "typeString": "tuple()"
+                                }
+                              },
+                              "id": 2655,
+                              "nodeType": "ExpressionStatement",
+                              "src": "698:29:22"
+                            },
+                            {
+                              "assignments": [
+                                2657
+                              ],
+                              "declarations": [
+                                {
+                                  "constant": false,
+                                  "id": 2657,
+                                  "name": "amt",
+                                  "nodeType": "VariableDeclaration",
+                                  "scope": 2679,
+                                  "src": "746:8:22",
+                                  "stateVariable": false,
+                                  "storageLocation": "default",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "typeName": {
+                                    "id": 2656,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "746:4:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "value": null,
+                                  "visibility": "internal"
+                                }
+                              ],
+                              "id": 2662,
+                              "initialValue": {
+                                "argumentTypes": null,
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "baseExpression": {
+                                    "argumentTypes": null,
+                                    "id": 2658,
+                                    "name": "payers",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 2603,
+                                    "src": "757:6:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                      "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                    }
+                                  },
+                                  "id": 2660,
+                                  "indexExpression": {
+                                    "argumentTypes": null,
+                                    "id": 2659,
+                                    "name": "i",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 2630,
+                                    "src": "764:1:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "nodeType": "IndexAccess",
+                                  "src": "757:9:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                    "typeString": "struct WithdrawalContract.Payer storage ref"
+                                  }
+                                },
+                                "id": 2661,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "amount",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2599,
+                                "src": "757:16:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "VariableDeclarationStatement",
+                              "src": "746:27:22"
+                            },
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "id": 2668,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftHandSide": {
+                                  "argumentTypes": null,
+                                  "expression": {
+                                    "argumentTypes": null,
+                                    "baseExpression": {
+                                      "argumentTypes": null,
+                                      "id": 2663,
+                                      "name": "payers",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2603,
+                                      "src": "792:6:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                                        "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                                      }
+                                    },
+                                    "id": 2665,
+                                    "indexExpression": {
+                                      "argumentTypes": null,
+                                      "id": 2664,
+                                      "name": "i",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 2630,
+                                      "src": "799:1:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    },
+                                    "isConstant": false,
+                                    "isLValue": true,
+                                    "isPure": false,
+                                    "lValueRequested": false,
+                                    "nodeType": "IndexAccess",
+                                    "src": "792:9:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_struct$_Payer_$2600_storage",
+                                      "typeString": "struct WithdrawalContract.Payer storage ref"
+                                    }
+                                  },
+                                  "id": 2666,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": true,
+                                  "memberName": "amount",
+                                  "nodeType": "MemberAccess",
+                                  "referencedDeclaration": 2599,
+                                  "src": "792:16:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "Assignment",
+                                "operator": "=",
+                                "rightHandSide": {
+                                  "argumentTypes": null,
+                                  "hexValue": "30",
+                                  "id": 2667,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "811:1:22",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_0_by_1",
+                                    "typeString": "int_const 0"
+                                  },
+                                  "value": "0"
+                                },
+                                "src": "792:20:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "id": 2669,
+                              "nodeType": "ExpressionStatement",
+                              "src": "792:20:22"
+                            },
+                            {
+                              "expression": {
+                                "argumentTypes": null,
+                                "arguments": [
+                                  {
+                                    "argumentTypes": null,
+                                    "arguments": [
+                                      {
+                                        "argumentTypes": null,
+                                        "id": 2674,
+                                        "name": "amt",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2657,
+                                        "src": "941:3:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      }
+                                    ],
+                                    "expression": {
+                                      "argumentTypes": [
+                                        {
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
+                                        }
+                                      ],
+                                      "expression": {
+                                        "argumentTypes": null,
+                                        "expression": {
+                                          "argumentTypes": null,
+                                          "id": 2671,
+                                          "name": "msg",
+                                          "nodeType": "Identifier",
+                                          "overloadedDeclarations": [],
+                                          "referencedDeclaration": 2718,
+                                          "src": "925:3:22",
+                                          "typeDescriptions": {
+                                            "typeIdentifier": "t_magic_message",
+                                            "typeString": "msg"
+                                          }
+                                        },
+                                        "id": 2672,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "sender",
+                                        "nodeType": "MemberAccess",
+                                        "referencedDeclaration": null,
+                                        "src": "925:10:22",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_address_payable",
+                                          "typeString": "address payable"
+                                        }
+                                      },
+                                      "id": 2673,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "memberName": "send",
+                                      "nodeType": "MemberAccess",
+                                      "referencedDeclaration": null,
+                                      "src": "925:15:22",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_function_send_nonpayable$_t_uint256_$returns$_t_bool_$",
+                                        "typeString": "function (uint256) returns (bool)"
+                                      }
+                                    },
+                                    "id": 2675,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": false,
+                                    "kind": "functionCall",
+                                    "lValueRequested": false,
+                                    "names": [],
+                                    "nodeType": "FunctionCall",
+                                    "src": "925:20:22",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bool",
+                                      "typeString": "bool"
+                                    }
+                                  ],
+                                  "id": 2670,
+                                  "name": "assert",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 2707,
+                                  "src": "918:6:22",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_function_assert_pure$_t_bool_$returns$__$",
+                                    "typeString": "function (bool) pure"
+                                  }
+                                },
+                                "id": 2676,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "kind": "functionCall",
+                                "lValueRequested": false,
+                                "names": [],
+                                "nodeType": "FunctionCall",
+                                "src": "918:28:22",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_tuple$__$",
+                                  "typeString": "tuple()"
+                                }
+                              },
+                              "id": 2677,
+                              "nodeType": "ExpressionStatement",
+                              "src": "918:28:22"
+                            },
+                            {
+                              "expression": null,
+                              "functionReturnParameters": 2628,
+                              "id": 2678,
+                              "nodeType": "Return",
+                              "src": "965:7:22"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2636,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2633,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2630,
+                      "src": "609:1:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2634,
+                        "name": "payers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2603,
+                        "src": "613:6:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Payer_$2600_storage_$dyn_storage",
+                          "typeString": "struct WithdrawalContract.Payer storage ref[] storage ref"
+                        }
+                      },
+                      "id": 2635,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "613:13:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "609:17:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2682,
+                  "initializationExpression": {
+                    "assignments": [
+                      2630
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 2630,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 2682,
+                        "src": "597:6:22",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 2629,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "597:4:22",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 2632,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 2631,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "606:1:22",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "597:10:22"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2638,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "628:3:22",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 2637,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2630,
+                        "src": "628:1:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2639,
+                    "nodeType": "ExpressionStatement",
+                    "src": "628:3:22"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "593:403:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 2683,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2723,
+                        2724
+                      ],
+                      "referencedDeclaration": 2723,
+                      "src": "1075:6:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 2684,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1075:8:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2685,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1075:8:22"
+                }
+              ]
+            },
+            "documentation": "Withdraw using this function*",
+            "id": 2687,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2627,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "519:2:22"
+            },
+            "returnParameters": {
+              "id": 2628,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "529:0:22"
+            },
+            "scope": 2703,
+            "src": "501:589:22",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2701,
+              "nodeType": "Block",
+              "src": "1145:106:22",
+              "statements": [
+                {
+                  "assignments": [
+                    2693
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 2693,
+                      "name": "thisContractsAddress",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 2701,
+                      "src": "1155:28:22",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      },
+                      "typeName": {
+                        "id": 2692,
+                        "name": "address",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1155:7:22",
+                        "stateMutability": "nonpayable",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 2697,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2695,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2776,
+                        "src": "1194:4:22",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_WithdrawalContract_$2703",
+                          "typeString": "contract WithdrawalContract"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_WithdrawalContract_$2703",
+                          "typeString": "contract WithdrawalContract"
+                        }
+                      ],
+                      "id": 2694,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "1186:7:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 2696,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1186:13:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1155:44:22"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 2698,
+                      "name": "thisContractsAddress",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2693,
+                      "src": "1216:20:22",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2699,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": null,
+                    "src": "1216:28:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 2691,
+                  "id": 2700,
+                  "nodeType": "Return",
+                  "src": "1209:35:22"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2702,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2688,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1116:2:22"
+            },
+            "returnParameters": {
+              "id": 2691,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2690,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2702,
+                  "src": "1140:4:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2689,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1140:4:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1139:6:22"
+            },
+            "scope": 2703,
+            "src": "1096:155:22",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2704,
+        "src": "25:1229:22"
+      }
+    ],
+    "src": "0:1254:22"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-10-17T16:51:09.429Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {
+      "pay()": {
+        "notice": "Pay to this function To make things easier - payer can pay only once, if tries more than once throw*"
+      },
+      "withdraw()": {
+        "notice": "Withdraw using this function*"
+      }
+    }
+  }
+}

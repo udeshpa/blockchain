@@ -1,0 +1,1648 @@
+{
+  "contractName": "ObjectOrientation",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "s1",
+          "type": "string"
+        },
+        {
+          "name": "s2",
+          "type": "string"
+        }
+      ],
+      "name": "concatenate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAgentInformation",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "commission",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "agentName",
+          "type": "string"
+        },
+        {
+          "name": "rate",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "saleAmount",
+          "type": "uint16"
+        }
+      ],
+      "name": "calculateAgentCommission",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "greaterThan",
+          "type": "uint8"
+        }
+      ],
+      "name": "getOwnerInfo",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "age",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getOwnerInfo",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "age",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"s1\",\"type\":\"string\"},{\"name\":\"s2\",\"type\":\"string\"}],\"name\":\"concatenate\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getAgentInformation\",\"outputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"commission\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"greaterThan\",\"type\":\"uint8\"}],\"name\":\"getOwnerInfo\",\"outputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"saleAmount\",\"type\":\"uint16\"}],\"name\":\"calculateAgentCommission\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getOwnerInfo\",\"outputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"age\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"agentName\",\"type\":\"string\"},{\"name\":\"rate\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/ObjectOrientation.sol\":\"ObjectOrientation\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/AbstractContract.sol\":{\"keccak256\":\"0xe4b6e89bb8e68bd05ca28ec7c418f0a0067f79bf7f02fe35599c0ff0bc7035de\",\"urls\":[\"bzzr://76f41d1e4de80fec3e7ffd23505eeb773ee173c8b85a85125c6fce2f3241d383\"]},\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/ObjectOrientation.sol\":{\"keccak256\":\"0xa9079f1a98b3fba17f2ca4f994a2b5c7ef77c957e3e6501324efae9e55719da0\",\"urls\":[\"bzzr://07429d7188f9d2f4b1909b9c51a359068b9ff465e830ffc7f726326c11d910d7\"]},\"/Users/udaydeshpande/elpt/project/project2/solidity/contracts/UtilContract.sol\":{\"keccak256\":\"0x0eb3ae0bd705acce11be3c462aa693b4b21254d018aa920e2cb8a88d6c156254\",\"urls\":[\"bzzr://8212ce9550d8b42ecaacfa45408f553a6aa9a80f267ca80a96593eb09537f738\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108193803806108198339810180604052604081101561003357600080fd5b81019080805164010000000081111561004b57600080fd5b8281019050602081018481111561006157600080fd5b815185600182028301116401000000008211171561007e57600080fd5b50509291906020018051906020019092919050505081806000800190805190602001906100ac9291906100d0565b505080600260006101000a81548160ff021916908360ff1602179055505050610175565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061011157805160ff191683800117855561013f565b8280016001018555821561013f579182015b8281111561013e578251825591602001919060010190610123565b5b50905061014c9190610150565b5090565b61017291905b8082111561016e576000816000905550600101610156565b5090565b90565b610695806101846000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063266001d31461005c578063acdc57fd14610227578063af7bfc78146102b1578063d1d7592714610368578063facf83231461039a575b600080fd5b6101ac6004803603604081101561007257600080fd5b810190808035906020019064010000000081111561008f57600080fd5b8201836020820111156100a157600080fd5b803590602001918460018302840111640100000000831117156100c357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561012657600080fd5b82018360208201111561013857600080fd5b8035906020019184600183028401116401000000008311171561015a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061042a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101ec5780820151818401526020810190506101d1565b50505050905090810190601f1680156102195780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61022f610573565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561027557808201518184015260208101905061025a565b50505050905090810190601f1680156102a25780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6102e0600480360360208110156102c757600080fd5b81019080803560ff169060200190929190505050610622565b60405180806020018360ff1660ff168152602001828103825284818151815260200191508051906020019080838360005b8381101561032c578082015181840152602081019050610311565b50505050905090810190601f1680156103595780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6103986004803603602081101561037e57600080fd5b81019080803561ffff16906020019092919050505061062b565b005b6103a2610661565b60405180806020018360ff1660ff168152602001828103825284818151815260200191508051906020019080838360005b838110156103ee5780820151818401526020810190506103d3565b50505050905090810190601f16801561041b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6060808390506060839050606081518351016040519080825280601f01601f19166020018201604052801561046e5781602001600182028038833980820191505090505b5090506060819050600080905060008090505b85518110156104ef5785818151811061049657fe5b602001015160f81c60f81b8383806001019450815181106104b357fe5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a9053508080600101915050610481565b5060008090505b84518110156105645784818151811061050b57fe5b602001015160f81c60f81b83838060010194508151811061052857fe5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a90535080806001019150506104f6565b50819550505050505092915050565b60606000806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561060f5780601f106105e45761010080835404028352916020019161060f565b820191906000526020600020905b8154815290600101906020018083116105f257829003601f168201915b5050505050915060006001015490509091565b60606000915091565b606481600260009054906101000a900460ff1660640160ff160261ffff168161065057fe5b0461ffff1660006001018190555050565b60606000909156fea165627a7a72305820ec06ef3fd61bb741fa0c29566dfc843439bbe0f09c51872d545dcfe4b875a93f0029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c8063266001d31461005c578063acdc57fd14610227578063af7bfc78146102b1578063d1d7592714610368578063facf83231461039a575b600080fd5b6101ac6004803603604081101561007257600080fd5b810190808035906020019064010000000081111561008f57600080fd5b8201836020820111156100a157600080fd5b803590602001918460018302840111640100000000831117156100c357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561012657600080fd5b82018360208201111561013857600080fd5b8035906020019184600183028401116401000000008311171561015a57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505061042a565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101ec5780820151818401526020810190506101d1565b50505050905090810190601f1680156102195780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61022f610573565b6040518080602001838152602001828103825284818151815260200191508051906020019080838360005b8381101561027557808201518184015260208101905061025a565b50505050905090810190601f1680156102a25780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6102e0600480360360208110156102c757600080fd5b81019080803560ff169060200190929190505050610622565b60405180806020018360ff1660ff168152602001828103825284818151815260200191508051906020019080838360005b8381101561032c578082015181840152602081019050610311565b50505050905090810190601f1680156103595780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6103986004803603602081101561037e57600080fd5b81019080803561ffff16906020019092919050505061062b565b005b6103a2610661565b60405180806020018360ff1660ff168152602001828103825284818151815260200191508051906020019080838360005b838110156103ee5780820151818401526020810190506103d3565b50505050905090810190601f16801561041b5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6060808390506060839050606081518351016040519080825280601f01601f19166020018201604052801561046e5781602001600182028038833980820191505090505b5090506060819050600080905060008090505b85518110156104ef5785818151811061049657fe5b602001015160f81c60f81b8383806001019450815181106104b357fe5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a9053508080600101915050610481565b5060008090505b84518110156105645784818151811061050b57fe5b602001015160f81c60f81b83838060010194508151811061052857fe5b60200101907effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff1916908160001a90535080806001019150506104f6565b50819550505050505092915050565b60606000806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561060f5780601f106105e45761010080835404028352916020019161060f565b820191906000526020600020905b8154815290600101906020018083116105f257829003601f168201915b5050505050915060006001015490509091565b60606000915091565b606481600260009054906101000a900460ff1660640160ff160261ffff168161065057fe5b0461ffff1660006001018190555050565b60606000909156fea165627a7a72305820ec06ef3fd61bb741fa0c29566dfc843439bbe0f09c51872d545dcfe4b875a93f0029",
+  "sourceMap": "146:905:11:-;;;299:116;8:9:-1;5:2;;;30:1;27;20:12;5:2;299:116:11;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;299:116:11;;;;;;19:11:-1;14:3;11:20;8:2;;;44:1;41;34:12;8:2;71:11;66:3;62:21;55:28;;123:4;118:3;114:14;159:9;141:16;138:31;135:2;;;182:1;179;172:12;135:2;219:3;213:10;330:9;325:1;311:12;307:20;289:16;285:43;282:58;261:11;247:12;244:29;233:115;230:2;;;361:1;358;351:12;230:2;0:372;;299:116:11;;;;;;;;;;;;;;;;;372:9;315:4:0;302:5;:10;;:17;;;;;;;;;;;;:::i;:::-;;256:68;406:4:11;389:14;;:21;;;;;;;;;;;;;;;;;;299:116;;146:905;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "146:905:11:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;146:905:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;177:441:12;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;177:441:12;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;177:441:12;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;177:441:12;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;177:441:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;177:441:12;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;177:441:12;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;177:441:12;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;177:441:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;177:441:12;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;177:441:12;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;465:153:0;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;465:153:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;887:160:11;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;887:160:11;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;887:160:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;501:173;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;501:173:11;;;;;;;;;;;;;;;;;;;:::i;:::-;;740:141;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;740:141:11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;177:441:12;255:13;277:14;300:2;277:26;;309:14;332:2;309:26;;341:20;384:1;:8;375:1;:8;:17;364:29;;;;;;;;;;;;;;;;;;;;;;;;;29:1:-1;21:6;17:14;116:4;104:10;96:6;87:34;147:4;139:6;135:17;125:27;;0:156;364:29:12;;;;341:52;;399:16;424:6;399:32;;437:6;446:1;437:10;;459:6;468:1;459:10;;454:65;475:1;:8;471:1;:12;454:65;;;508:1;510;508:4;;;;;;;;;;;;;;;;498:2;501:3;;;;;;498:7;;;;;;;;;;;:14;;;;;;;;;;;485:3;;;;;;;454:65;;;;530:6;539:1;530:10;;525:65;546:1;:8;542:1;:12;525:65;;;579:1;581;579:4;;;;;;;;;;;;;;;;569:2;572:3;;;;;;569:7;;;;;;;;;;;:14;;;;;;;;;;;556:3;;;;;;;525:65;;;;610:2;596:17;;;;;;;177:441;;;;:::o;465:153:0:-;518:18;538:15;568:5;:10;;561:17;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;597:5;:16;;;584:29;;465:153;;:::o;887:160:11:-;946:18;966:9;887:160;;;:::o;501:173::-;666:3;654:10;638:14;;;;;;;;;;;632:3;:20;631:33;;;630:39;;;;;;;;611:58;;:5;:16;;:58;;;;501:173;:::o;740:141::-;781:18;801:9;740:141;;:::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"./AbstractContract.sol\";\nimport \"./UtilContract.sol\";\n\n// Demonstrates Solidity's support for object orientation\ncontract ObjectOrientation is AbstractContract, UtilContract {\n\n  uint8   commissionRate;\n\n\n  // Constructor invokes the constructor of the base class\n  constructor(string memory agentName, uint8 rate) public AbstractContract(agentName) {\n    commissionRate = rate;\n  }\n\n  // This function has to be implemented otherwise this contract will be abstract\n  function  calculateAgentCommission(uint16 saleAmount) public {\n    // The commissionRate is in percentage\n    agent.commission = ((100 + commissionRate)*saleAmount)/100;\n  }\n\n  // OVERLOADING - following two functions have the same name\n  function  getOwnerInfo() public returns (string memory name, uint8 age) {\n    /** ignore warnings - they are due to unused vars & args */\n  }\n  \n  function  getOwnerInfo(uint8 greaterThan) public  returns (string memory name, uint8 age) {\n     /** ignore warnings - they are due to unused vars & args */\n  }\n\n\n}",
+  "sourcePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/ObjectOrientation.sol",
+  "ast": {
+    "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/ObjectOrientation.sol",
+    "exportedSymbols": {
+      "ObjectOrientation": [
+        1355
+      ]
+    },
+    "id": 1356,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1293,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/AbstractContract.sol",
+        "file": "./AbstractContract.sol",
+        "id": 1294,
+        "nodeType": "ImportDirective",
+        "scope": 1356,
+        "sourceUnit": 45,
+        "src": "25:32:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/UtilContract.sol",
+        "file": "./UtilContract.sol",
+        "id": 1295,
+        "nodeType": "ImportDirective",
+        "scope": 1356,
+        "sourceUnit": 1450,
+        "src": "58:28:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1296,
+              "name": "AbstractContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 44,
+              "src": "176:16:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AbstractContract_$44",
+                "typeString": "contract AbstractContract"
+              }
+            },
+            "id": 1297,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:16:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1298,
+              "name": "UtilContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1449,
+              "src": "194:12:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UtilContract_$1449",
+                "typeString": "contract UtilContract"
+              }
+            },
+            "id": 1299,
+            "nodeType": "InheritanceSpecifier",
+            "src": "194:12:11"
+          }
+        ],
+        "contractDependencies": [
+          44,
+          1449
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1355,
+        "linearizedBaseContracts": [
+          1355,
+          1449,
+          44
+        ],
+        "name": "ObjectOrientation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1301,
+            "name": "commissionRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 1355,
+            "src": "212:22:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1300,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "212:5:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1315,
+              "nodeType": "Block",
+              "src": "383:32:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1313,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1311,
+                      "name": "commissionRate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1301,
+                      "src": "389:14:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1312,
+                      "name": "rate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1305,
+                      "src": "406:4:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "389:21:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 1314,
+                  "nodeType": "ExpressionStatement",
+                  "src": "389:21:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1316,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1308,
+                    "name": "agentName",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1303,
+                    "src": "372:9:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 1309,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1307,
+                  "name": "AbstractContract",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 44,
+                  "src": "355:16:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_AbstractContract_$44_$",
+                    "typeString": "type(contract AbstractContract)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "355:27:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1303,
+                  "name": "agentName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1316,
+                  "src": "311:23:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1302,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1305,
+                  "name": "rate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1316,
+                  "src": "336:10:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1304,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "310:37:11"
+            },
+            "returnParameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "383:0:11"
+            },
+            "scope": 1355,
+            "src": "299:116:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1335,
+              "nodeType": "Block",
+              "src": "562:112:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1333,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1321,
+                        "name": "agent",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "611:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AgentStruct_$6_storage",
+                          "typeString": "struct AbstractContract.AgentStruct storage ref"
+                        }
+                      },
+                      "id": 1323,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "commission",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5,
+                      "src": "611:16:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      },
+                      "id": 1332,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            },
+                            "id": 1329,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "components": [
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                  },
+                                  "id": 1326,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "313030",
+                                    "id": 1324,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "632:3:11",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_100_by_1",
+                                      "typeString": "int_const 100"
+                                    },
+                                    "value": "100"
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "+",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "id": 1325,
+                                    "name": "commissionRate",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 1301,
+                                    "src": "638:14:11",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint8",
+                                      "typeString": "uint8"
+                                    }
+                                  },
+                                  "src": "632:20:11",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                  }
+                                }
+                              ],
+                              "id": 1327,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "TupleExpression",
+                              "src": "631:22:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 1328,
+                              "name": "saleAmount",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1318,
+                              "src": "654:10:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint16",
+                                "typeString": "uint16"
+                              }
+                            },
+                            "src": "631:33:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          }
+                        ],
+                        "id": 1330,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "630:35:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint16",
+                          "typeString": "uint16"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "/",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "313030",
+                        "id": 1331,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "666:3:11",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_100_by_1",
+                          "typeString": "int_const 100"
+                        },
+                        "value": "100"
+                      },
+                      "src": "630:39:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "src": "611:58:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1334,
+                  "nodeType": "ExpressionStatement",
+                  "src": "611:58:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1336,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateAgentCommission",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1318,
+                  "name": "saleAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1336,
+                  "src": "536:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1317,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "535:19:11"
+            },
+            "returnParameters": {
+              "id": 1320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "562:0:11"
+            },
+            "scope": 1355,
+            "src": "501:173:11",
+            "stateMutability": "nonpayable",
+            "superFunction": 25,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1343,
+              "nodeType": "Block",
+              "src": "812:69:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1344,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOwnerInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1337,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "762:2:11"
+            },
+            "returnParameters": {
+              "id": 1342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1339,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1344,
+                  "src": "781:18:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1338,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "781:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1341,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1344,
+                  "src": "801:9:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1340,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "801:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "780:31:11"
+            },
+            "scope": 1355,
+            "src": "740:141:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1353,
+              "nodeType": "Block",
+              "src": "977:70:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1354,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOwnerInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1346,
+                  "name": "greaterThan",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "910:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1345,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "910:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "909:19:11"
+            },
+            "returnParameters": {
+              "id": 1352,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1349,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "946:18:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1348,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "946:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1351,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "966:9:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1350,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "966:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "945:31:11"
+            },
+            "scope": 1355,
+            "src": "887:160:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1356,
+        "src": "146:905:11"
+      }
+    ],
+    "src": "0:1051:11"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/ObjectOrientation.sol",
+    "exportedSymbols": {
+      "ObjectOrientation": [
+        1355
+      ]
+    },
+    "id": 1356,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1293,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:11"
+      },
+      {
+        "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/AbstractContract.sol",
+        "file": "./AbstractContract.sol",
+        "id": 1294,
+        "nodeType": "ImportDirective",
+        "scope": 1356,
+        "sourceUnit": 45,
+        "src": "25:32:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/udaydeshpande/elpt/project/project2/solidity/contracts/UtilContract.sol",
+        "file": "./UtilContract.sol",
+        "id": 1295,
+        "nodeType": "ImportDirective",
+        "scope": 1356,
+        "sourceUnit": 1450,
+        "src": "58:28:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1296,
+              "name": "AbstractContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 44,
+              "src": "176:16:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AbstractContract_$44",
+                "typeString": "contract AbstractContract"
+              }
+            },
+            "id": 1297,
+            "nodeType": "InheritanceSpecifier",
+            "src": "176:16:11"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1298,
+              "name": "UtilContract",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1449,
+              "src": "194:12:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_UtilContract_$1449",
+                "typeString": "contract UtilContract"
+              }
+            },
+            "id": 1299,
+            "nodeType": "InheritanceSpecifier",
+            "src": "194:12:11"
+          }
+        ],
+        "contractDependencies": [
+          44,
+          1449
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1355,
+        "linearizedBaseContracts": [
+          1355,
+          1449,
+          44
+        ],
+        "name": "ObjectOrientation",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1301,
+            "name": "commissionRate",
+            "nodeType": "VariableDeclaration",
+            "scope": 1355,
+            "src": "212:22:11",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 1300,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "212:5:11",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 1315,
+              "nodeType": "Block",
+              "src": "383:32:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1313,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1311,
+                      "name": "commissionRate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1301,
+                      "src": "389:14:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1312,
+                      "name": "rate",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1305,
+                      "src": "406:4:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "389:21:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 1314,
+                  "nodeType": "ExpressionStatement",
+                  "src": "389:21:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1316,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "id": 1308,
+                    "name": "agentName",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 1303,
+                    "src": "372:9:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory_ptr",
+                      "typeString": "string memory"
+                    }
+                  }
+                ],
+                "id": 1309,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1307,
+                  "name": "AbstractContract",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 44,
+                  "src": "355:16:11",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_contract$_AbstractContract_$44_$",
+                    "typeString": "type(contract AbstractContract)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "355:27:11"
+              }
+            ],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1306,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1303,
+                  "name": "agentName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1316,
+                  "src": "311:23:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1302,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1305,
+                  "name": "rate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1316,
+                  "src": "336:10:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1304,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "336:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "310:37:11"
+            },
+            "returnParameters": {
+              "id": 1310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "383:0:11"
+            },
+            "scope": 1355,
+            "src": "299:116:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1335,
+              "nodeType": "Block",
+              "src": "562:112:11",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1333,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1321,
+                        "name": "agent",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "611:5:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AgentStruct_$6_storage",
+                          "typeString": "struct AbstractContract.AgentStruct storage ref"
+                        }
+                      },
+                      "id": 1323,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "commission",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 5,
+                      "src": "611:16:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      },
+                      "id": 1332,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            },
+                            "id": 1329,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "components": [
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                  },
+                                  "id": 1326,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "313030",
+                                    "id": 1324,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "632:3:11",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_100_by_1",
+                                      "typeString": "int_const 100"
+                                    },
+                                    "value": "100"
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "+",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "id": 1325,
+                                    "name": "commissionRate",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 1301,
+                                    "src": "638:14:11",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint8",
+                                      "typeString": "uint8"
+                                    }
+                                  },
+                                  "src": "632:20:11",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint8",
+                                    "typeString": "uint8"
+                                  }
+                                }
+                              ],
+                              "id": 1327,
+                              "isConstant": false,
+                              "isInlineArray": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "TupleExpression",
+                              "src": "631:22:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint8",
+                                "typeString": "uint8"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 1328,
+                              "name": "saleAmount",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1318,
+                              "src": "654:10:11",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint16",
+                                "typeString": "uint16"
+                              }
+                            },
+                            "src": "631:33:11",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint16",
+                              "typeString": "uint16"
+                            }
+                          }
+                        ],
+                        "id": 1330,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "630:35:11",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint16",
+                          "typeString": "uint16"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "/",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "313030",
+                        "id": 1331,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "666:3:11",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_100_by_1",
+                          "typeString": "int_const 100"
+                        },
+                        "value": "100"
+                      },
+                      "src": "630:39:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint16",
+                        "typeString": "uint16"
+                      }
+                    },
+                    "src": "611:58:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1334,
+                  "nodeType": "ExpressionStatement",
+                  "src": "611:58:11"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1336,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateAgentCommission",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1319,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1318,
+                  "name": "saleAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1336,
+                  "src": "536:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 1317,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "536:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "535:19:11"
+            },
+            "returnParameters": {
+              "id": 1320,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "562:0:11"
+            },
+            "scope": 1355,
+            "src": "501:173:11",
+            "stateMutability": "nonpayable",
+            "superFunction": 25,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1343,
+              "nodeType": "Block",
+              "src": "812:69:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1344,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOwnerInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1337,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "762:2:11"
+            },
+            "returnParameters": {
+              "id": 1342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1339,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1344,
+                  "src": "781:18:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1338,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "781:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1341,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1344,
+                  "src": "801:9:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1340,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "801:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "780:31:11"
+            },
+            "scope": 1355,
+            "src": "740:141:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1353,
+              "nodeType": "Block",
+              "src": "977:70:11",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1354,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getOwnerInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1347,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1346,
+                  "name": "greaterThan",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "910:17:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1345,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "910:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "909:19:11"
+            },
+            "returnParameters": {
+              "id": 1352,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1349,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "946:18:11",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1348,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "946:6:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1351,
+                  "name": "age",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1354,
+                  "src": "966:9:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1350,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "966:5:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "945:31:11"
+            },
+            "scope": 1355,
+            "src": "887:160:11",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1356,
+        "src": "146:905:11"
+      }
+    ],
+    "src": "0:1051:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-10-14T17:32:54.016Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
